@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Konga Health L'Oreal x Cerave Reseller</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        }
+
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        menu,
+        nav,
+        output,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        }
+
+        body {
+        font-family: "Montserrat", sans-serif;
+        background-color: #f2f2f2;
+        }
+
+        section {
+        padding: 0 !important;
+        margin: 0 !important;
+        min-height: 0 !important;
+        }
+
+        /*--------------------------------------------------------------
+                # Sections General
+                --------------------------------------------------------------*/
+        .container {
+        padding: 60px 25px;
+        }
+
+        .required {
+        color: red;
+        }
+
+        section {
+        padding: 60px 0;
+        margin: 30px 0;
+        }
+
+        .section-bg {
+        background-color: #f8c7e0;
+        }
+
+        header {
+        background-color: #afb6f7;
+        text-align: center;
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+        z-index: 998;
+        }
+
+        footer {
+        background-color: #e9e9e9;
+        text-align: center;
+        color: #252525;
+        padding: 14px !important;
+        }
+
+        header img {
+        margin-inline: auto;
+        max-width: fit-content;
+        margin: 10px !important;
+        }
+
+        .section-title {
+        margin-inline: auto;
+        text-align: center;
+        padding-bottom: 30px;
+        }
+
+        .section-title h2 {
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        position: relative;
+        }
+
+        .section-title h2::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 120px;
+        height: 1px;
+        background: #ffffff;
+        bottom: 1px;
+        left: calc(50% - 60px);
+        }
+
+        .section-title h2::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 40px;
+        height: 3px;
+        background: #ed017f;
+        bottom: 0;
+        left: calc(50% - 20px);
+        }
+
+        .section-title p {
+        margin-bottom: 0;
+        }
+
+        .mySlides {
+        width: 100%;
+        }
+
+        .container {
+        display: flex;
+        flex-wrap: wrap;
+        }
+
+        .box {
+        width: 50%;
+        box-sizing: border-box;
+        }
+
+        .box img {
+        max-width: 100%;
+        padding: 20px;
+        height: auto;
+        width: 100%; /* Set width for large image */
+        }
+
+        .mobile {
+        display: none;
+        }
+
+        .flyer {
+        background-color: #e02c8c;
+        background-image: url("background-img.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #fff;
+        padding: 16px 24px;
+        text-align: left;
+        margin-top: 10px;
+        }
+
+        .section__container {
+        width: 100%;
+        max-width: 1280px;
+        margin: auto;
+        padding: 1rem;
+        text-align: center;
+        }
+
+        .section__containers {
+        width: 100%;
+        margin: auto;
+        padding: 1rem;
+        text-align: center;
+        background-color: #fff;
+        }
+
+        .header {
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+        }
+
+        .heading {
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+        background-color: #fff;
+        background-image: url("background-img.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #252525;
+        text-align: center;
+        padding: 16px 24px;
+        margin-top: 1rem;
+        }
+
+        .header p {
+        letter-spacing: 2px;
+        font-size: 28px;
+        font-weight: 500;
+        }
+
+        .header h1 {
+        font-size: 36px;
+        font-weight: 600;
+        }
+
+        .card {
+        display: grid;
+        gap: 1rem;
+        box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonials__grids {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        }
+
+        .cards {
+        display: grid;
+        padding: 30px;
+        }
+
+        .flyer p {
+        font-size: 24px;
+        font-weight: 600;
+        }
+
+        .container-form {
+        margin: 0 auto;
+        padding: 16px 0 0;
+        border-radius: 2px;
+        }
+        .form-groups {
+        margin-bottom: 16px;
+        }
+        .form-groups label {
+        display: block;
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 4px;
+        color: #252525;
+        }
+        .form-groups .row {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        width: 100%;
+        }
+        .form-groups input,
+        .form-groups select {
+        width: 100% !important;
+        padding: 14px !important;
+        font-size: 12px !important;
+        border: 1px solid #e7e7e7 !important;
+        border-radius: 4px !important;
+        }
+
+        .form-groups .full-width {
+        width: 100% !important;
+        }
+
+        .btn {
+        font-size: 14px;
+        font-weight: 500;
+        color: #fff;
+        background-color: #ed017f;
+        border: none;
+        margin-top: 12px;
+        border-radius: 4px;
+        text-transform: none;
+        padding: 12px 10px;
+        width: 100%;
+        cursor: pointer;
+        transition: background-color 0.6s;
+        }
+
+        .btn:hover {
+        background-color: #94004f;
+        color: #fceff6;
+        }
+
+        select {
+        appearance: none !important;
+        -webkit-appearance: none !important;
+        -moz-appearance: none !important;
+        cursor: pointer !important;
+        }
+
+        .custom-select-wrapper {
+        position: relative !important;
+        display: inline-block !important;
+        width: 100% !important;
+        }
+
+        .custom-select {
+        height: auto !important;
+        }
+
+        .categ {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap: 3%;
+        grid-column-gap: 3%;
+        padding: 0px;
+        margin-bottom: 40px;
+        }
+
+        .catego {
+        color: white;
+        border-radius: 4px;
+        margin-top: 20px;
+        margin-bottom: 16px;
+        padding-left: 32px;
+        padding-right: 32px;
+        }
+
+        .cateo {
+        padding: 1px;
+        }
+        .cateo img:hover {
+        transform: scale(1.02);
+        transition: all 0.3s ease-in-out;
+        }
+
+        .about-us {
+        background-color: #fff;
+        padding: 2rem 1rem;
+        }
+
+        .about-us__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 1280px;
+        margin: auto;
+        flex-wrap: wrap;
+        }
+
+        .about-us__text,
+        .about-us__image {
+        flex: 1;
+        padding: 1rem;
+        text-align: center; /* Center align for mobile view */
+        }
+
+        .about-us__text h2 {
+        font-size: 30px;
+        text-align: left;
+        }
+
+        .about-us__text p {
+        font-size: 16px;
+        text-align: left;
+        }
+
+        .about-us__text {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        gap: 30px;
+        padding: 10px;
+        }
+
+        .about-us__image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+        }
+
+        .seo-container {
+        max-width: 1200;
+        margin: 30px;
+        padding: 20px 30px 30px;
+        background-color: #fff;
+        border-radius: 0.3125rem;
+        }
+
+        .head {
+        font-size: 21px;
+        color: #5a5f66;
+        font-weight: 600;
+        margin-bottom: 6px;
+        }
+
+        .heads {
+        font-size: 16px;
+        color: #5a5f66;
+        font-weight: 600;
+        margin-bottom: 6px;
+        }
+
+        .seo-container p {
+        font-size: 14px;
+        color: #5a5f66;
+        font-weight: 400;
+        }
+
+        /* BEGINNING OF DIALOG MODAL */
+        .hidden {
+        display: none;
+        }
+
+        /* Overlay */
+        .overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 999;
+        background-color: rgba(0, 0, 0, 0.7);
+        animation: fade-in 0.2s;
+        }
+
+        /* Dialog */
+        .dialog {
+        position: fixed;
+        right: 0;
+        top: 0;
+        transform: translate(0, 0);
+        z-index: 99999;
+        width: 100%;
+        max-width: 600px;
+        height: 100vh;
+        background: white;
+        padding: 20px;
+        border-radius: 4px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        animation: slide-in 0.5s;
+        overflow-y: auto; /* Allows scrolling if content overflows */
+        }
+
+        .dialog-header,
+        .dialog-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+
+        #dialog-header {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        }
+
+        #dialog-title {
+        font-size: 20px !important;
+        font-weight: bold;
+        }
+
+        #dialog-close {
+        background: #ed017f;
+        border-radius: 4px;
+        width: 28px;
+        height: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 28px;
+        font-weight: 600;
+        opacity: 0.8;
+        border: none;
+        }
+
+        .dialog-description {
+        margin-bottom: 20px;
+        }
+
+        /*  --- FORM DESIGN  --- */
+
+        .form-img img {
+        width: 100%;
+        }
+
+        @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+        }
+
+        @keyframes slide-in {
+        from {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        }
+
+        @media screen and (min-width: 768px) {
+        .form-group.row {
+            display: flex;
+        }
+        .form-group.row .col {
+            width: 50%;
+        }
+
+        .about-us__text h2 {
+            font-size: 24px;
+            text-align: left;
+        }
+
+        .about-us__text p {
+            font-size: 16px;
+            text-align: left;
+        }
+        }
+
+        /* Media query for mobile screens */
+        @media (max-width: 680px) {
+        .box {
+            width: 100%;
+        }
+        .about-us__container {
+            flex-direction: column;
+        }
+        .section-title h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            padding-bottom: 14px;
+            position: relative;
+        }
+
+        footer {
+            padding: 8px !important;
+            font-size: 12px;
+        }
+
+        header img {
+            margin-inline: auto;
+            max-width: 70px;
+            margin: 8px !important;
+        }
+
+        .container {
+            padding: 30px 15px;
+        }
+
+        .form-groups label {
+            font-size: 12px;
+            margin-bottom: 2px;
+        }
+
+        .about-us__text {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            gap: 10px;
+        }
+
+        .box img {
+            align-items: center;
+            width: 400px; /* Full width for mobile */
+            height: auto;
+            max-height: 400px; /* Adjust height for mobile */
+            margin-inline: auto;
+        }
+
+        /* BEGINNING OF DIALOG  */
+        .dialog {
+            width: 90%;
+            height: 100vh;
+            border-radius: 4px;
+            padding: 18px 10px;
+            max-width: none;
+        }
+        #dialog-title {
+            font-size: 14px !important;
+            font-weight: bold;
+        }
+
+        #dialog-close {
+            background: #ed017f;
+            border-radius: 2px;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 22px;
+            font-weight: 500;
+            opacity: 0.8;
+            border: none;
+        }
+
+        .form-groups input,
+        .form-groups select {
+            width: 100% !important;
+            padding: 12px !important;
+            font-size: 10px !important;
+            border: 1px solid #e7e7e7 !important;
+            border-radius: 4px !important;
+        }
+
+        .laptop {
+            display: none;
+        }
+
+        .mobile {
+            display: block;
+        }
+
+        .flyer {
+            padding: 10px 16px;
+            text-align: left;
+        }
+
+        .flyer p {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .categ {
+            display: grid;
+            width: 100%;
+            grid-template-columns: repeat(2, 1fr);
+            grid-row-gap: 0.8%;
+            grid-column-gap: 0.8%;
+            padding: 0px;
+        }
+
+        .catego {
+            color: white;
+            border-radius: 4px;
+            margin-top: 2px;
+            margin-bottom: 32px !important;
+        }
+
+        .about-us__text h2 {
+            font-size: 20px;
+            text-align: left;
+        }
+
+        .about-us__text p {
+            font-size: 14px;
+            text-align: left;
+        }
+
+        .heading {
+            font-size: 14px;
+        }
+        }
+
+        @media (width < 900px) {
+        .testimonials__grid,
+        .testimonials__grids {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .testimonials__grids {
+            margin-inline: 0px;
+        }
+
+        .categ {
+            display: grid;
+            width: 100%;
+            margin-top: 10px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-row-gap: 1%;
+            grid-column-gap: 5%;
+            padding: 0px;
+        }
+
+        .catego {
+            color: white;
+            border-radius: 4px;
+            margin-top: 2px;
+        }
+        }
+
+        @media (width < 600px) {
+        .testimonials__grid {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .testimonials__grids {
+            grid-template-columns: repeat(1, 1fr);
+            margin: 0px;
+        }
+
+        .cards {
+            padding: 30px 0;
+        }
+
+        .header p {
+            letter-spacing: 0px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .form-group.row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .form-group.row .col {
+            width: 100%;
+        }
+
+        .col {
+            padding: 0px 12px !important;
+        }
+
+        .container-form {
+            padding: 10px 0px;
+            border-radius: 6px;
+        }
+
+        .categ {
+            display: grid;
+            width: 100%;
+            margin-top: 10px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-row-gap: 1%;
+            grid-column-gap: 3%;
+            padding: 0px;
+        }
+
+        .catego {
+            color: white;
+            border-radius: 4px;
+            margin-top: 2px;
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+        }
+
+    </style>
+  </head>
+
+  <body>
+
+
+
+    <header>
+      <img
+        src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto/v1724574008/landingPages/Konga%20Health%20Resellers%2025_09_2024/logo.png"
+        style="width: 100%; margin-bottom: 20px;"
+        alt="Konga Health Logo"
+      />
+    </header>
+
+
+
+    <div class="mySlides">
+      <a id="dialog-trigger">
+        <img
+          src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto/v1724574013/landingPages/Konga%20Health%20Resellers%2025_09_2024/Main_banner.png"
+          style="width: 100%; cursor: pointer;"
+          alt="Konga Health Resellers banner Image"
+        />
+      </a>
+    </div>
+<!--     
+    <div class="mySlides mobile">
+      <a id="dialog-trigger">
+        <img
+          src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto/v1721816569/Konga%20Corporate%2024_07_2024/main-banner-mob.png"
+          style="width: 100%"
+          alt="Order Bulk Products Banner Image"
+        />
+      </a>
+    </div> -->
+
+    <div id="dialog-portal">
+      <div id="dialog-overlay" class="overlay hidden"></div>
+      <div id="dialog-content" class="dialog hidden">
+        <div id="dialog-header">
+          <h2 id="dialog-title">Please fill the form and we will contact you</h2>
+          <button id="dialog-close">&times;</button>
+        </div>
+        <hr style="border: #a9a9a9 1px solid;">
+        <div id="dialog-body">
+          <div class="section-form" id="form-fill">
+            <div class="form-img">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto/v1724574008/landingPages/Konga%20Health%20Resellers%2025_09_2024/callerid.png" alt="Called Id for konga health">
+            </div>
+              <div class="container-form">
+                  <form id="form">
+                      <!--  Company Name & Address  -->
+                      <div class="form-groups full-width">
+                        <label for="companyName">Company Name <span class="required">*</span></label>
+                        <input type="text" id="companyName" name="companyName" placeholder="Enter Company Name" required>
+                      </div>
+                      <div class="form-groups full-width">
+                        <label for="companyAddress">Company Address <span class="required">*</span></label>
+                        <input type="text" id="companyAddress" name="companyAddress" placeholder="Enter Company Address" required>
+                      </div>
+                      
+                      <!--  Staff to Contact  -->
+                      <div class="form-groups full-width">
+                        <label for="contactPerson">Contact Person <span class="required">*</span></label>
+                        <input type="text" id="contactPerson" name="contactPerson" placeholder="Enter your Full Name" required>
+                      </div>
+      
+      
+                      <!--  Telephone Number  -->
+                        <div class="form-groups full-width">
+                          <label for="phone">Phone Number <span class="required">*</span></label>
+                          <input type="number" id="phone" name="phone" placeholder="Enter your Phone Number" required>
+                        </div>
+
+                        <!--  Whatsapp Number   -->
+                        <div class="form-groups full-width">
+                          <label for="whatsappNumber">Whatsapp Number <span class="required">*</span></label>
+                          <input type="number" id="whatsappNumber" name="whatsappNumber" placeholder="Enter your Whatsapp Number" required>
+                        </div>
+                      
+                       <!--  Email Address  -->
+                       <div class="form-groups full-width">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="Enter your Email Address" required>
+                      </div>
+                      
+                      <!--  Product Categories  -->
+      
+                      <div class="form-groups full-width">
+                        <label for="categories">Designation<span class="required">*</span></label>
+                        <div class="custom-select-wrapper">
+                          <select id="categories" name="categories" class="custom-select" required>
+                            <option value="">Choose Category</option>
+                            <option value="Doctor">Doctor</option>
+                            <option value="Pharmacist">Pharmacist</option>
+                            <option value="Dermatologist">Dermatologist</option>
+                            <option value="Retail seller">Retail seller</option>
+                            <option value=">Bulk seller">Bulk seller</option>
+                            <option value="Others">Others</option>
+                          </select>
+                        </div>
+                      </div>
+                      
+                      <div id="message"></div>
+                      <button type="submit" class="btn mb-5">Submit Form</button>
+                    </form>
+                </div>
+          </div>
+        </div>
+      </div>
+
+    
+        <div>
+          <img
+            src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto/v1724574008/landingPages/Konga%20Health%20Resellers%2025_09_2024/banner2.png"
+            style="width: 100%"
+          />
+        </div>
+
+        <div>
+            <img
+              src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto/v1724574009/landingPages/Konga%20Health%20Resellers%2025_09_2024/banner3.png"
+              style="width: 100%"
+            />
+        </div>
+
+        <div>
+            <img
+              src="https://www-konga-com-res.cloudinary.com/image/upload/w_auto,f_auto,fl_lossy,dpr_auto/v1724574008/landingPages/Konga%20Health%20Resellers%2025_09_2024/banner4.png"
+              style="width: 100%"
+            />
+        </div>
+
+
+      <footer>
+        <p>&copy; <span id="currentYear"></span> All rights reserved, Konga Health.</p>
+      </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        const dialogTrigger = document.getElementById("dialog-trigger");
+        const dialogOverlay = document.getElementById("dialog-overlay");
+        const dialogContent = document.getElementById("dialog-content");
+        const dialogCloseButtons = document.querySelectorAll(
+        "#dialog-close, #dialog-close-footer"
+        );
+
+        dialogTrigger.addEventListener("click", () => {
+        dialogOverlay.classList.remove("hidden");
+        dialogContent.classList.remove("hidden");
+        });
+
+        dialogCloseButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            dialogOverlay.classList.add("hidden");
+            dialogContent.classList.add("hidden");
+        });
+        });
+
+        dialogOverlay.addEventListener("click", () => {
+        dialogOverlay.classList.add("hidden");
+        dialogContent.classList.add("hidden");
+        });
+
+        // Get the current year
+        const currentYear = new Date().getFullYear();
+        // Set the current year in the footer
+        document.getElementById("currentYear").textContent = currentYear;
+
+        const formElem = document.querySelector("#form");
+
+        const newMessage = document.getElementById("message");
+
+        // submit handler
+        formElem.addEventListener("submit", (e) => {
+        // on form submission, prevent default
+        e.preventDefault();
+
+        const companyName = document.getElementById("companyName").value;
+        const companyAddress = document.getElementById("companyAddress").value;
+        const contactPerson = document.getElementById("contactPerson").value;
+        const phone = document.getElementById("phone").value;
+        const email = document.getElementById("email").value;
+        const categories = document.getElementById("categories").value;
+        const whatsappNumber = document.getElementById("whatsappNumber").value;
+
+        const payload = {
+            medium: "email",
+            name: "kcorporate_purchase_request",
+            recipient: "info@kongahealth.com ",
+            subject: "Purchase Request",
+            sender: "no-reply@konga.com",
+            sender_id: "Konga Corporate",
+            params: {
+            companyName: companyName,
+            companyAddress: companyAddress,
+            contactPerson: contactPerson,
+            phone: phone,
+            email: email,
+            categories: categories,
+            whatsappNumber: whatsappNumber,
+            },
+        };
+        sendFormData(payload);
+        });
+
+        const sendFormData = async (payload) => {
+        axios.interceptors.request.use(
+            function(config) {
+            config.headers['Access-Control-Allow-Origin'] = '*';
+            return config;
+            }
+        );
+        
+        axios.interceptors.response.use(
+            function(response) {
+            response.headers['Access-Control-Allow-Origin'] = '*';
+            return response;
+            }
+        );
+        axios
+            .post("https://hermes.igbimo.com/v1/notifications", payload)
+            .then((response) => {
+            // Handle the response data
+            if (response.status === 200) {
+                newMessage.textContent = "Message sent successfully! We will contact you shortly ✅";
+                newMessage.style.color = "black";
+                newMessage.style.fontWeight = "500";
+                setTimeout(() => {
+                window.location.reload(); // Reset the page after a short delay
+                }, 2000); // Reset the form to its original state
+            } else {
+                // Handle other statuses
+                newMessage.textContent = "Something went wrong. Please try again.";
+                newMessage.style.color = "red";
+            }
+            })
+            .catch((error) => {
+            console.error("Error:", error);
+            });
+        };
+
+    </script>
+
+  </body>
+</html>
